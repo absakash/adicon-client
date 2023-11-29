@@ -1,7 +1,10 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
 
 const ServicesDetails = (props) => {
-    console.log("hey" ,props)
+    const shamir=useLoaderData();
+    console.log("shomir man",shamir)
+   
     return (
         <div>
             this is the result.......

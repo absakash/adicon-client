@@ -41,6 +41,11 @@ const router=createBrowserRouter([
                 element:<About></About>
             },
             {
+                path:'/servicedetails/:id',
+                loader: ({params})=>fetch(`imagesData.JSON/{params.id}}`),
+                element:<ServicesDetails></ServicesDetails>
+            },
+            {
                 path:'*',
                 element:<div>not yet found ............</div>
             }

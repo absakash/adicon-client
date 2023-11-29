@@ -46,7 +46,7 @@ const Services = () => {
 
 
   const handleAboutmore=data=>{
-    console.log(data)
+    console.log("onclik data ",data)
   }
   return (
     <div className="ml-5 mr-5 rounded-2xl my-5">
@@ -64,7 +64,7 @@ const Services = () => {
                   <h2 className="card-title">Mechanical !</h2>
                   <p>About the services </p>
                   <div className="card-actions justify-end">
-                    <Link  name={"akash"}   onClick={()=>handleAboutmore(data)} className="btn bg-gradient-to-r from-red-300 via-pink-500 to-green-200">
+                    <Link to={`/servicedetails/${data.id}`}  name={"akash"}   onClick={()=>handleAboutmore(data)} className="btn bg-gradient-to-r from-red-300 via-pink-500 to-green-200">
                       About More
                     </Link>
                   </div>

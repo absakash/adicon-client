@@ -3,6 +3,7 @@ import Banner from './Banner';
 import Workshop from './Workshop';
 import Projects from './Projects';
 import Expertise from './Expertise';
+import Practice from './Practice';
 
 const Home = () => {
     return (
@@ -11,6 +12,7 @@ const Home = () => {
              <Workshop></Workshop>
              <Projects></Projects>
              <Expertise></Expertise>
+             <Practice></Practice>
         </div>
     );
 };

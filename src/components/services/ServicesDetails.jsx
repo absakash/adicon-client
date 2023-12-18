@@ -1,9 +1,9 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 
-const ServicesDetails = (props) => {
-    const shamir=useLoaderData();
-    console.log("shomir man",shamir)
+const ServicesDetails = () => {
+    const image=useLoaderData();
+    console.log("shomir man",image)
    
     return (
         <div>

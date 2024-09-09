@@ -7,6 +7,8 @@ import ServicesDetails from "../components/services/ServicesDetails";
 import ProjectsDetails from "../components/home/ProjectsDetails";
 import Register from "../components/logReg/Register";
 import About from "../components/about/About";
+import Deb from "../components/home/expertizeInfo/Deb";
+import Akash from "../components/home/expertizeInfo/Akash";
 const router=createBrowserRouter([
     {
         path:'/',
@@ -39,6 +41,14 @@ const router=createBrowserRouter([
             {
                 path:'/about',
                 element:<About></About>
+            },
+            {
+                path: "/details/deb",
+                element:<Deb></Deb>
+            },
+            {
+                path: "/details/akash",
+                element:<Akash></Akash>
             },
             {
                 path:'/servicedetails/:id',

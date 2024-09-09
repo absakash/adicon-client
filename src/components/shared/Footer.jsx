@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import AdiconLogo from "./AdiconLogo";
 
 const Footer = () => {
   return (
-    <div className="ml-5 mr-5 rounded-2xl py-10 mt-10">
-        <div className="max-w-6xl mx-auto mt-1">
+    <div className="ml-5 mr-5 rounded-2xl py-10 mt-10  bottom-0">
+        <div className="">
       <footer className="footer p-10 bg-base-300 text-base-content">
         <nav>
           <header className="footer-title">Services</header>
@@ -16,9 +17,9 @@ const Footer = () => {
         <nav>
           <header className="footer-title">Company</header>
           <Link to='/about'  className="link link-hover">About us</Link>
-          <Link href="/contact"  className="link link-hover">Contact</Link>
-          <a className="link link-hover">Jobs</a>
-          <a className="link link-hover">Press kit</a>
+          <Link to="/contact"  className="link link-hover">Contact</Link>
+          <a className="link link-hover">deb.infradev@gmail.com</a>
+          <a className="link link-hover">akashboswas2@gmail.com</a>
         </nav>
         <nav>
           <header className="footer-title">Social</header>
@@ -56,7 +57,12 @@ const Footer = () => {
                 <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
               </svg>
             </a>
+       
+           
           </div>
+         
+              <AdiconLogo></AdiconLogo>
+           
         </nav>
       </footer>
     </div>

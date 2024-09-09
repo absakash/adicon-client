@@ -1,0 +1,16 @@
+h2 {
+      border: 2px solid transparent;
+      text-align: center;
+      background-color: black;
+      opacity: 50%;
+      border-radius: 20%;
+      color: white;
+      padding: 25px;
+      cursor: pointer; /* Add cursor pointer */
+    }
+    
+    .all {
+      background-color: brown;
+      opacity: 80%;
+    }
+    

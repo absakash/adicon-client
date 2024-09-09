@@ -52,6 +52,9 @@ const Contact = () => {
                 <h1>Email </h1>
 
                 <p> deb.infradev@gmail.com</p>
+                <p> adicon.deb.com</p>
+                <p> adicon.akash.com</p>
+                <p> akashboswas2@gmail.com</p>
               </div>
             </div>
             <div className="flex gap-5 mt-3 hover:text-emerald-500 hover:scale-105">

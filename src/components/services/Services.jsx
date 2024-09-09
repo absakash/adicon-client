@@ -1,108 +1,74 @@
 import React, { useEffect, useState } from "react";
-import img1 from "../../assets/banner/1.jpg";
-import img2 from "../../assets/banner/2.jpg";
+import { Link } from "react-router-dom";
+
 import img3 from "../../assets/banner/3.jpg";
 import img4 from "../../assets/banner/4.jpg";
-import img5 from "../../assets/homeCarousel/1.jpg"
-import img6 from "../../assets/homeCarousel/2.jpg"
-import img7 from "../../assets/homeCarousel/3.jpg"
-import img8 from "../../assets/homeCarousel/4.jpg"
-import { Link } from "react-router-dom";
+import img5 from "../../assets/homeCarousel/1.jpg";
+import img6 from "../../assets/homeCarousel/2.jpg";
+import img7 from "../../assets/homeCarousel/3.jpg";
+import img8 from "../../assets/homeCarousel/4.jpg";
+import img9 from "../../assets/banner/9.jpeg";
+import img10 from "../../assets/banner/10.jpg";
+import img11 from "../../assets/banner/11.jpg";
+import img12 from "../../assets/banner/12.jpg";
+import img13 from "../../assets/banner/13.jpeg";
+import img14 from "../../assets/banner/14.jpg";
+import img15 from "../../assets/banner/15.jpg";
+import img16 from "../../assets/banner/16.jpg";
+import img17 from "../../assets/banner/17.jpeg";
+import img18 from "../../assets/banner/18.jpeg";
+import img19 from "../../assets/banner/19.jpg";
+import img20 from "../../assets/banner/20.jpeg";
+
 const Services = () => {
-  // const imagesData = [
-  //   {
-  //     id: 1,
-  //     image: img1,
-  //   },
-  //   {
-  //     id: 2,
-  //     image: img2,
-  //   },
-  //   {
-  //     id: 3,
-  //     image: img3,
-  //   },
-  //   {
-  //     id: 4,
-  //     image: img4,
-  //   },
-  //   {
-  //     id: 5,
-  //     image: img5,
-  //   },
-  //   {
-  //     id: 6,
-  //     image: img6,
-  //   },
-  //   {
-  //     id: 7,
-  //     image: img7,
-  //   },
-  //   {
-  //     id: 8,
-  //     image: img8,
-  //   },
-  // ];
+  const [imagesData, setImagesData] = useState([]);
 
-  const [imagesDat, setImagesDat] = useState([]);
+  useEffect(() => {
+    fetchImagesData();
+  }, []);
 
-  useEffect(()=>{
-    fetch("imagesData.json")
-    .then((res) => res.json())
-    .then((data) => {
-      console.log("this data ",data);
-      setImagesDat(data);
-      console.log("this is my",imagesDat);
-    });
-  },[])
- 
+  const fetchImagesData = () => {
+    const images = [
+      { id: 3, image: img3 },
+      { id: 4, image: img4 },
+      { id: 5, image: img5 },
+      { id: 6, image: img6 },
+      { id: 7, image: img7 },
+      { id: 8, image: img8 },
+      { id: 9, image: img9 },
+      { id: 10, image: img10 },
+      { id: 11, image: img11 },
+      { id: 12, image: img12 },
+      { id: 13, image: img13 },
+      { id: 14, image: img14 },
+      { id: 15, image: img15 },
+      { id: 16, image: img16 },
+      { id: 17, image: img17 },
+      { id: 18, image: img18 },
+      { id: 19, image: img19 },
+      { id: 20, image: img20 },
+    ];
+    setImagesData(images);
+  };
 
-
-  const handleAboutmore=data=>{
-    console.log("onclik data ",data)
-  }
   return (
     <div className="ml-5 mr-5 rounded-2xl my-5">
       <div className="max-w-6xl mx-auto mt-1">
         <div className="text-center text-4xl mb-5">Our Provided Services</div>
 
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-7">
-          {imagesDat.map((data) => (
-            <div  data={data} key={data.id} className="hover:scale-105">
-              <div className="card card-compact w-96 bg-base-100 shadow-xl">
-                <figure>
-                  <img src={data.image} alt="Shoes" />
-                </figure>
-                <div className="card-body">
-                  <h2 className="card-title">Mechanical !</h2>
-                  <p>About the services </p>
-                  <div className="card-actions justify-end">
-                    <Link to={`/servicedetails/${data.id}`} onClick={()=>handleAboutmore(data)}     className="btn bg-gradient-to-r from-red-300 via-pink-500 to-green-200">
-                      About More
-                    </Link>
-                  </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7">
+          {imagesData.map((data) => (
+            <div key={data.id} className="overflow-hidden hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-105">
+              <div className="bg-white rounded-xl">
+                <img src={data.image} alt="Service" className="object-cover w-full h-64 md:h-80" />
+                <div className="p-4">
+                  <h2 className="text-lg font-semibold mb-2">Mechanical Services</h2>
+                  <p className="text-gray-600">Description of the service...</p>
                 </div>
               </div>
             </div>
           ))}
-        </div> 
-
-        {/* <div className="card card-compact w-96 bg-base-100 shadow-xl">
-            <figure>
-              <img
-                src={img1}
-                alt="Shoes"
-              />
-            </figure>
-            <div className="card-body">
-              <h2 className="card-title">Mechanical !</h2>
-              <p>About the services </p>
-              <div className="card-actions justify-end">
-                <button className="btn bg-gradient-to-r from-red-300 via-pink-500 to-green-200">Buy Now</button>
-              </div>
-            </div>
-          </div>  */}
-          
+        </div>
       </div>
     </div>
   );

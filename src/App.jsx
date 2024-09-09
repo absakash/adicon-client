@@ -7,11 +7,11 @@ function App() {
  
 
   return (
-    <>
+    <div className="max-w-[1600px] mx-auto mt-1 shadow-xl rounded-3xl">
      <RouterProvider router={router}>
      </RouterProvider>
      <Toaster></Toaster>
-    </>
+    </div>
   )
 }
 
